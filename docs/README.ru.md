@@ -1,27 +1,24 @@
 <h1 align="center">Compact UI library (OOP)</h1>
 <p align="center">
-  <em>A library for quick deployment of user interface components. It is necessary when the components are used on the site. The library will continue to be updated, this is not its last build.</em>
+  <em>Библиотека для быстрого развёртывания компонентов пользовательского интерфейса. Она необходима, если компоненты используются на сайте. Библиотека будет продолжать обновляться, это не последняя её версия.</em>
 </p>
 
-## Documentation language
-- [Дока на русском](./docs/README.ru.md)
+## Навигация
+- [Структура проекта](#section-lib-structure)
+  - [Глобальная структура](#section-global-structure)
+  - [Важная структура](#section-important-files)
 
-## Navigation in documentation
-- [Project Structure](#section-lib-structure)
-  - [Global Structure](#section-global-structure)
-  - [Important files](#section-important-files)
-
-- [How to use](#section-how-to-use)
-  - [Download lib](#dwn-lib)
-  - [Import Lib](#import-lib)
-  - [Use Components](#use-components)
+- [Как использовать](#section-how-to-use)
+  - [Скачать библиотеку](#dwn-lib)
+  - [Добавление в проект](#import-lib)
+  - [Использование компонентов](#use-components)
     - [Use PopUp](#use-component-1)
     - [Use Tooltip](#use-component-2)
     - [Use FormValidator](#use-component-3)
     - [Use Chat](#use-component-4)
     - [Use PopUpNotification](#use-component-5)
 
-- [Components](#section-components)
+- [Компоненты](#section-components)
   - [Core UI Library](#section-ui-framework)
   - [Popups & Modals](#section-popups-modals)
   - [Form Validation](#section-form-validation)
@@ -30,47 +27,46 @@
   - [Chat & Queue](#section-сhat-queue)
   - [Text Selection Errors](#section-text-selection-errors)
 
-- [Author](#section-author)
+- [Автор](#section-author)
   - [Kirill Doroshev](https://github.com/dkmfzf)
 
-- [License](#section-license)
-  - [MIT]()
+- [Лицензия](#section-license)
 
 <h2 id="section-lib-structure">
-  Lib structure
+  Структура проекта
 </h2>
 
 <h3 id="section-global-structure">
-  Global Structure
+  Глобальная структура
 </h3>
 
-- src/ — project source files
-- src/Components/Chat — chat component folder
-- src/Components/Notification — the folder with the message component
-- src/Components/PopUpSelectionError — folder with the error selection component
-- src/ContentSwitcher — folder with the content switch component
-- src/FormValidation — folder with the form validation component
-- src/PopUp — folder with pop-up window components
+- src/ — корневая папка проекта
+- src/Components/Chat — папка с компонентами чата
+- src/Components/Notification — папка с компонентом сообщения
+- src/Components/PopUpSelectionError — папка с компонентом выбора ошибки
+- src/ContentSwitcher — папка с компонентом переключателя контента
+- src/FormValidation — папка с компонентом валидации формы
+- src/PopUp — папка с компонентами всплывающих окон
 
 <h3 id="section-important-files">
-  Important files
+  Важная структура
 </h3>
 
-- src/index.ts — the main library file
-- src/UILib.ts — the main library lifecycle file
-- src/utils/utils.ts — a file with auxiliary functions
+- src/index.ts — главный файл библиотеки
+- src/UILib.ts — главный файл жизненного цикла библиотеки
+- src/utils/utils.ts — файл с вспомогательными функциями
 
 <h2 id="section-how-to-use">
-  How To Use
+  Как использовать
 </h2>
 
-__DISCLAIMER: The library is in its very first build, and it will later be added to the `npm` package infrastructure. At the moment, it is only available through explicit use in the project.__
+__ДИСКЛЕЙМЕР: библиотека находиться в самом первом своём билде, в последствии она будет добавлена в инфраструктуру ```npm``` пакетов. На данный момент она доступна только через явное использование в проекте.__
 
-In order to use the library, you need to import it into your project, and all files in src/ (it is advisable to create a separate directory for this, for example: ``src/lib/'library file"`).
-After the files are imported, you can start creating components and use them in your project.
+Для того что бы использовать библиотеку, необходимо импортировать ее в свой проект, а все файлы в src/ (желательно для этого создать отдельную директорию например: ```src/lib/'файл библиотеки'```).
+После того как файлы будут импортированны можно приступать к созданию компонентов и использовать их в своем проекте.  
 
 <h3 id="dwn-lib">
-  1. Installing the library
+  1. Установка библиотеки
 </h3>
 
 ```bash
@@ -78,7 +74,7 @@ git clone https://github.com/DKMFzF/web-ui-library.git
 ```
 
 <h3 id="import-lib">
-  2. Import the library into the project
+  2. Импорт библиотеки в проект
 </h3>
 
 ```TypeScript
@@ -106,40 +102,39 @@ import {
 ```
 
 <h3 id="use-components">
-  3. Using the components
+  3. Использование компонентов
 </h3>
 
-Now you can use the components and functions from the library in your project. Here are some examples:
+Теперь вы можете использовать компоненты и функции из библиотеки в вашем проекте. Вот несколько примеров:  
 
 <h4 id="use-component-1">
-  3.1 Using PopUp
+  3.1 Использование PopUp
 </h4>
 
 ```TypeScript
   const popup = new PopUp();
-  popup.initAll(); // Initialization of all pop-up windows on the page
+  popup.initAll(); // Инициализация всех всплывающих окон на странице
 ```
 
 <h4 id="use-component-2">
-  3.2 Using Tooltip
+  3.2 Использование Tooltip
 </h4>
 
 ```TypeScript
   const tooltip = new Tooltip();
   tooltip.init('[data-trigger-tooltip]', '[data-content-tooltip]'); // Initializing tooltips
 ```
-
 <h4 id="use-component-3">
-  3.3 Using the FormValidator
+  3.3 Использование FormValidator
 </h4>
 
 ```TypeScript
   const formValidator = new FormValidator();
-  formValidator.initAll(); // Initialization of validation of all forms on the page
+  formValidator.initAll(); // Инициализация валидации всех форм на странице
 ```
 
 <h4 id="use-component-4">
-  3.4 Using Chat
+  3.4 Использование Chat
 </h4>
 
 ```TypeScript
@@ -147,12 +142,12 @@ Now you can use the components and functions from the library in your project. H
     nameFile: 'chat.html',
     widthWindow: 400,
     heightWindow: 600,
-    form: document.querySelector('#chat-form'), // User name input form
+    form: document.querySelector('#chat-form'), // Форма для ввода имени пользователя
   });
 ```
 
 <h4 id="use-component-5">
-  3.5 Using PopUpNotification
+  3.5 Использование PopUpNotification
 </h4>
 
 ```TypeScript
@@ -236,7 +231,7 @@ Now you can use the components and functions from the library in your project. H
 ```
 
 <h2 id="section-components">
-  Components
+  Компоненты
 </h2>
 
 В даном разделе описанны все компоненты, которые используются в библиотеке. К компонентам приложенна UML-диаграммы, которые явно показывают связи между компонентами. Для уменьшения места в некоторых компонентах **уменьшина дитализация**. Это означает что компонент был описан выше и повтороное описание не требовалось.
@@ -260,7 +255,7 @@ Now you can use the components and functions from the library in your project. H
 
 #### UML-диаграмма компонента
 <p>
-  <img width="100%" height="100%" src="./docs/base-class.png">  
+  <img width="100%" height="100%" src="./base-class.png">  
 </p> 
 
 <h3 id="section-popups-modals">
@@ -314,7 +309,7 @@ Now you can use the components and functions from the library in your project. H
 
 #### UML-диаграмма компонента
 <p>
-  <img width="100%" height="100%" src="./docs/pop-up.png">  
+  <img width="100%" height="100%" src="./pop-up.png">  
 </p>
 
 <h3 id="section-form-validation">
@@ -340,7 +335,7 @@ Now you can use the components and functions from the library in your project. H
 
 #### UML-диаграмма компонента
 <p>
-  <img width="100%" height="100%" src="./docs/valid.png">  
+  <img width="100%" height="100%" src="./valid.png">  
 </p>
 
 <h3 id="section-content-switching">
@@ -390,7 +385,7 @@ Now you can use the components and functions from the library in your project. H
 
 #### UML-диаграмма компонента
 <p>
-  <img width="100%" height="100%" src="./docs/swither.png">  
+  <img width="100%" height="100%" src="./swither.png">  
 </p>
 
 <h3 id="section-async-components">
@@ -410,7 +405,7 @@ Now you can use the components and functions from the library in your project. H
 
 #### UML-диаграмма компонента
 <p>
-  <img width="100%" height="100%" src="./docs/asnc.png">  
+  <img width="100%" height="100%" src="./asnc.png">  
 </p>
 
 <h3 id="section-сhat-queue">
@@ -453,7 +448,7 @@ Now you can use the components and functions from the library in your project. H
 
 #### UML-диаграмма компонента
 <p>
-  <img width="100%" height="100%" src="./docs/chat.png">  
+  <img width="100%" height="100%" src="./chat.png">  
 </p>
 
 <h3 id="section-text-selection-errors">
@@ -479,18 +474,20 @@ Now you can use the components and functions from the library in your project. H
 Как может быть использован:
 - Получение выделенного текста для анализа или исправления.
 - Отображение опций копирования, вставки или исправления текста.
+
+#### UML-диаграмма компонента
 <p>
-  <img width="100%" height="100%" src="./docs/error.png">  
+  <img width="100%" height="100%" src="./error.png">  
 </p>
 
 <h2 id="section-author">
   Author
 </h2>
 
-[Kirill Doroshev (DKMFzF)](https://vk.com/dkmfzf )
+[Дорошев Кирилл (DKMFzF)](https://vk.com/dkmfzf )
 
 <h2 id="section-license">
-  License
+  Лицензия
 </h2>
 
-This project is licensed under the MIT license
+Этот проект лицензирован по лицензии MIT

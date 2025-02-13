@@ -34,7 +34,6 @@
   - [Kirill Doroshev](https://github.com/dkmfzf)
 
 - [License](#section-license)
-  - [MIT]()
 
 <h2 id="section-lib-structure">
   Lib structure
