@@ -1,50 +1,88 @@
 <h1 align="center">Compact UI library (OOP)</h1>
 <p align="center">
-  <em>Библиотека для быстрого развертывания компонентов пользовательского интерфейса. Она необходима, когда компоненты используются на сайте. Библиотека будет продолжать обновляться, это не последняя ее сборка.</em>
+  <em>A library for quick deployment of user interface components. It is necessary when the components are used on the site. The library will continue to be updated, this is not its last build.</em>
 </p>
 
 ## Documentation language
 - [Дока на русском](./docs/README.ru.md)
 
 ## Navigation in documentation
+- [Project Structure](#section-lib-structure)
+  - [Global Structure](#section-global-structure)
+  - [Important files](#section-important-files)
 
-- [Core UI Library](#section-ui-framework)
-- [Popups & Modals](#section-popups-modals)
-- [Form Validation](#section-form-validation)
-- [Content Switching](#section-content-switching)
-- [Async Components](#section-async-components)
-- [Chat & Queue](#section-сhat-queue)
-- [Text Selection Errors](#section-text-selection-errors)
+- [How to use](#section-how-to-use)
+  - [Download lib](#dwn-lib)
+  - [Import Lib](#import-lib)
+  - [Use Components](#use-components)
+    - [Use PopUp](#use-component-1)
+    - [Use Tooltip](#use-component-2)
+    - [Use FormValidator](#use-component-3)
+    - [Use Chat](#use-component-4)
+    - [Use PopUpNotification](#use-component-5)
 
-## Lib structure
+- [Components](#section-components)
+  - [Core UI Library](#section-ui-framework)
+  - [Popups & Modals](#section-popups-modals)
+  - [Form Validation](#section-form-validation)
+  - [Content Switching](#section-content-switching)
+  - [Async Components](#section-async-components)
+  - [Chat & Queue](#section-сhat-queue)
+  - [Text Selection Errors](#section-text-selection-errors)
+
+- [Author](#section-author)
+  - [Kirill Doroshev](https://github.com/dkmfzf)
+
+- [License](#section-license)
+  - [MIT]()
+
+<h2 id="section-lib-structure">
+  Lib structure
+</h2>
+
+<h3 id="section-global-structure">
+  Global Structure
+</h3>
+
 - src/ — project source files
-- src/Components/Chat — папка с компонентами чата
-- src/Components/Notification — папка с компонентом сообщения
-- src/Components/PopUpSelectionError — папка с компонентом выбора ошибки
-- src/ContentSwitcher — папка с компонентом переключателя контента
-- src/FormValidation — папка с компонентом валидации формы
-- src/PopUp — папка с компонентами всплывающих окон
+- src/Components/Chat — chat component folder
+- src/Components/Notification — the folder with the message component
+- src/Components/PopUpSelectionError — folder with the error selection component
+- src/ContentSwitcher — folder with the content switch component
+- src/FormValidation — folder with the form validation component
+- src/PopUp — folder with pop-up window components
 
-## Important files
-- src/index.ts — главный файл библиотеки
-- src/UILib.ts — главный файл жизненного цикла библиотеки
-- src/utils/utils.ts — файл с вспомогательными функциями
+<h3 id="section-important-files">
+  Important files
+</h3>
 
-## How to use
+- src/index.ts — the main library file
+- src/UILib.ts — the main library lifecycle file
+- src/utils/utils.ts — a file with auxiliary functions
 
-<span style="color:red;">ДИСКЛЕЙМЕР</span>: библиотека находиться в самом первом её билде, в последствии она будет добавлена в инфраструктуру ```npm``` пакетов. На данный момент она доступна только через явное использование в проекте.
+<h2 id="section-how-to-use">
+  How To Use
+</h2>
 
-Для того что бы использовать библиотеку, необходимо импортировать ее в свой проект, а все файлы в src/ (желательно для этого создать отдельную директорию например: ```src/lib/'файл библиотеки'```).
-После того как файлы будут импортированны можно приступать к созданию компонентов и использовать их в своем проекте.  
+__DISCLAIMER: The library is in its very first build, and it will later be added to the `npm` package infrastructure. At the moment, it is only available through explicit use in the project.__
 
-**1. Установка библиотеки**
+In order to use the library, you need to import it into your project, and all files in src/ (it is advisable to create a separate directory for this, for example: ``src/lib/'library file"`).
+After the files are imported, you can start creating components and use them in your project.
+
+<h3 id="dwn-lib">
+  1. Installing the library
+</h3>
+
 ```bash
 git clone https://github.com/DKMFzF/web-ui-library.git
 ```
 
-**2. Импорт библиотеки в проект**
+<h3 id="import-lib">
+  2. Import the library into the project
+</h3>
+
 ```TypeScript
-// index.ts (расположен в корне проекта)
+// index.ts (located at the root of the project)
 
 import {
   UILib,
@@ -67,73 +105,91 @@ import {
 } from './lib/index.ts';
 ```
 
-**3. Использование компонентов**  
-Теперь вы можете использовать компоненты и функции из библиотеки в вашем проекте. Вот несколько примеров:  
+<h3 id="use-components">
+  3. Using the components
+</h3>
 
-**3.1 Использование PopUp**
+Now you can use the components and functions from the library in your project. Here are some examples:
+
+<h4 id="use-component-1">
+  3.1 Using PopUp
+</h4>
+
 ```TypeScript
   const popup = new PopUp();
-  popup.initAll(); // Инициализация всех всплывающих окон на странице
+  popup.initAll(); // Initialization of all pop-up windows on the page
 ```
 
-**3.2 Использование Tooltip**
+<h4 id="use-component-2">
+  3.2 Using Tooltip
+</h4>
+
 ```TypeScript
   const tooltip = new Tooltip();
-  tooltip.init('[data-trigger-tooltip]', '[data-content-tooltip]'); // Инициализация тултипов
+  tooltip.init('[data-trigger-tooltip]', '[data-content-tooltip]'); // Initializing tooltips
 ```
 
-**3.3 Использование FormValidator**  
+<h4 id="use-component-3">
+  3.3 Using the FormValidator
+</h4>
+
 ```TypeScript
   const formValidator = new FormValidator();
-  formValidator.initAll(); // Инициализация валидации всех форм на странице
+  formValidator.initAll(); // Initialization of validation of all forms on the page
 ```
 
-**3.4 Использование Chat**
+<h4 id="use-component-4">
+  3.4 Using Chat
+</h4>
+
 ```TypeScript
   const chat = new Chat({
     nameFile: 'chat.html',
     widthWindow: 400,
     heightWindow: 600,
-    form: document.querySelector('#chat-form'), // Форма для ввода имени пользователя
+    form: document.querySelector('#chat-form'), // User name input form
   });
 ```
 
-**3.5 Использование PopUpNotification**
+<h4 id="use-component-5">
+  3.5 Using PopUpNotification
+</h4>
+
 ```TypeScript
   const popupNotification = new PopUpNotification();
-  popupNotification.addNotification('Новое уведомление!');
-  popupNotification.renderNotification(); // Отображение уведомления
+  popupNotification.addNotification('New notification!');
+  popupNotification.renderNotification(); // Notification display
 ```
 
-**4. Настройка HTML**  
-Для работы некоторых компонентов (например, PopUp, Tooltip, Dropdown) требуется определённая структура HTML. Например:
+**4. HTML Settings**  
+Some components (for example, PopUp, Tooltip, Dropdown) require a specific HTML structure to work. For example:
 
-**4.1 Для PopUp**
+**4.1 For PopUp**
 ```HTML
-  <button data-trigger-popup="myPopup">Открыть PopUp</button>
+  <button data-trigger-popup="myPopup">Open PopUp</button>
   <div id="myPopup" data-content-popup>
-    <p>Это всплывающее окно!</p>
+    <p>It's a pop-up window!</p>
   </div>
 ```
 
-**4.2 Для Tooltip:**
+**4.2 For Tooltip:**
 ```HTML
-  <button data-trigger-tooltip="myTooltip">Наведите на меня</button>
+  <button data-trigger-tooltip="myTooltip">Point it at me</button>
   <div id="myTooltip" data-content-tooltip>
-    <p>Это тултип!</p>
+    <p>This is a tooltip!</p>
   </div>
 ```
 
-**4.3 Для FormVali**
+**4.3 For FormVali**
 ```HTML
   <form data-form>
     <input type="text" class="form__input" required>
-    <button type="submit">Отправить</button>
+    <button type="submit">Send</button>
   </form>
 ```
 
-**5. Настройка стилей**  
-Убедитесь, что у вас подключены стили для компонентов. Например, для PopUp и Tooltip могут потребоваться CSS-классы, такие как widget_hidden, display_flex и другие.
+**5. Customize styles**  
+Make sure that you have styles enabled for the components. For example, PopUp and Tooltip may require CSS classes such as widget_hidden, display_flex, and others.
 ```CSS
   .widget_hidden {
     display: none;
@@ -144,33 +200,33 @@ import {
   }
 ```
 
-**6. Использование утилит**
-Вы можете использовать утилиты, такие как ensureElement, ensureAllElements, capitalizeFirst и другие, в своём коде. Например:
+**6. Using utilities**
+You can use utilities like ensureElement, ensureAllElements, capitalizeFirst, and others in your code. For example:
 ```JavaScript
-  import { ensureElement, capitalizeFirst } from 'ваш путь до библиотеки';
+  import { ensureElement, capitalizeFirst } from 'your path to the library';
 
-  const element = ensureElement('#myElement'); // Получение элемента
+  const element = ensureElement('#myElement'); // Getting the element
   const capitalizedString = capitalizeFirst('hello'); // "Hello"
 ```
 
-**7. Пример полного использования**
-Вот пример использования нескольких компонентов вместе:
+**7. An example of full usage**
+Here is an example of using multiple components together:
 ```JavaScript
-  import { PopUp, Tooltip, FormValidator, Chat } from 'ваш путь до библиотеки';
+  import { PopUp, Tooltip, FormValidator, Chat } from 'your way to the library';
 
-  // Инициализация PopUp
+  // Initializing the PopUp
   const popup = new PopUp();
   popup.initAll();
 
-  // Инициализация Tooltip
+  // Initialization of the Tooltip
   const tooltip = new Tooltip();
   tooltip.init('[data-trigger-tooltip]', '[data-content-tooltip]');
 
-  // Инициализация FormValidator
+  // Initializing the FormValidator
   const formValidator = new FormValidator();
   formValidator.initAll();
 
-  // Инициализация Chat
+  // Initialization of Chat
   const chat = new Chat({
     nameFile: 'chat.html',
     widthWindow: 400,
@@ -179,85 +235,82 @@ import {
   });
 ```
 
-## Components
+<h2 id="section-components">
+  Components
+</h2>
+
+This section describes all the components that are used in the library. The components are accompanied by UML diagrams that clearly show the relationships between the components. To reduce the space in some components **, the visualization is reduced**. This means that the component was described above and a repeat description was not required.
 
 <h3 id="section-ui-framework">
-  Базовый UI-фреймворк (Core UI Library)
+  Basic UI Framework (Core UI Library)
 </h3>
 
-Абстрактный класс, который служит основой для всех UI-компонентов. Он определяет базовые методы для инициализации элементов интерфейса и управления их состоянием (показ, скрытие, переключение).
+An abstract class that serves as the basis for all UI components. It defines the basic methods for initializing interface elements and managing their state (showing, hiding, switching).
 
-Методы:
-- ```initAll(): void``` — Инициализирует все UI-компоненты на странице.
-- ```init(widget: SelectorElement | SelectorElement[],  trigger: SelectorElement | SelectorElement[]): void``` — Инициализирует конкретный компонент с указанным триггером.
-- ```toggle(popup: HTMLElement): void``` — Переключает видимость всплывающего элемента.
-- ```show(popup: HTMLElement): void``` — Показывает всплывающий элемент.
-- ```hide(popup: HTMLElement): void``` — Скрывает всплывающий элемент.
+Methods:
+- ``initAll(): void`` — Initializes all UI components on the page.
+- ``init(widget: SelectorElement | SelectorElement[], trigger: SelectorElement | SelectorElement[]): void`` — Initializes a specific component with the specified trigger.
+- ``toggle(popup: HTMLElement): void`` — Switches the visibility of the popup element.
+- ``show(popup: HTMLElement): void`` — Shows a popup element.
+- ``hide(popup: HTMLElement): void`` — Hides the popup element.
 
-Как может быть использован:
-- Создание новых UI-компонентов, которые требуют управления видимостью.
-- Реализация общих механизмов для всплывающих окон, вкладок, модальных окон и других интерфейсных элементов.
+How can it be used:
+- Create new UI components that require visibility management.
+- Implementation of common mechanisms for pop-up windows, tabs, modal windows and other interface elements.
 
-#### UML-диаграмма компонента
+#### UML component diagram
 <p>
   <img width="100%" height="100%" src="./docs/base-class.png">  
 </p> 
 
-----
-
-```text
-Остальные компоненты будут наследоваться от базового UI-фреймворка. Для уменьшения места, в дальнейших диограммах он будет менее дитализированным.
-```
-----
-
 <h3 id="section-popups-modals">
-  Всплывающие окна и элементы (Popups & Modals)
+  Popups and Elements (Popups & Modals)
 </h3>
 
-#### Класс: PopUp
-Описание: базовый класс для управления всплывающими элементами, такими как модальные окна, выпадающие списки и тултипы. Он определяет методы для отображения всплывающих элементов и их позиционирования относительно триггеров.
+#### Class: PopUp
+Description: A basic class for managing pop-up elements such as modal windows, drop-down lists, and tooltips. It defines methods for displaying pop-up elements and positioning them relative to triggers.
 
-Методы:
-- ```initAll(): void``` — Инициализирует все PopUp-элементы.
-- ```init(trigger: SelectorElement, popup: SelectorElement): void``` — Инициализирует конкретное всплывающее окно.
-- ```determineСoords(trigger: HTMLElement, popup: HTMLElement): void``` — Определяет координаты отображения всплывающего окна относительно триггера.
-- ```positioningElement(positionStr: string, coords: DOMRect, popupSize: DOMRect): PositionInterface``` — Вычисляет финальное положение окна.
-- ```addBehavior(trigger: HTMLElement, popup: HTMLElement): void``` — Добавляет обработчики событий.
+Methods:
+- ``initAll(): void`` — Initializes all PopUp elements.
+- ``init(trigger: SelectorElement, popup: SelectorElement): void`` — Initializes a specific popup window.
+- ``determineCoords(trigger: HTMLElement, popup: HTMLElement): void`` — Defines the coordinates of the popup window display relative to the trigger.
+- ```positioningElement(positionStr: string, coords: DOMRect, popupSize: DOMRect): PositionInterface`` — Calculates the final position of the window.
+- ``addBehavior(trigger: HTMLElement, popup: HTMLElement): void`` — Adds event handlers.
 
-Как может быть использован:
-- Управление модальными окнами в веб-приложении.
-- Отображение всплывающих подсказок или контекстных меню при наведении.
+How can it be used:
+- Managing modal windows in a web application.
+- Display of popup hints or context menus on hover.
 
-#### Класс: Dropdown
-Описание: расширяет функциональность PopUp и реализует поведение выпадающего списка (dropdown).
+#### Class: Dropdown
+Description: Extends PopUp functionality and implements dropdown behavior.
 
-Методы:
-- ```addBehavior(trigger: HTMLElement, popup: HTMLElement): void``` — Добавляет поведение для открытия и закрытия списка.
+Methods:
+- ``addBehavior(trigger: HTMLElement, popup: HTMLElement): void`` — Adds behavior for opening and closing a list.
 
-Как может быть использован:
-- Реализация навигационных меню с вложенными пунктами.
-- Создание полей ввода с автодополнением.
+How can it be used:
+- Implementation of navigation menus with nested items.
+- Creation of input fields with auto-completion.
 
-#### Класс: Modal (Наследуется от PopUp)
-Описание: отдельный тип всплывающего элемента, предназначенный для отображения модальных окон с затемнением фона.
+#### Class: Modal (Inherited from PopUp)
+Description: A separate type of popup element designed to display modal windows with darkened backgrounds.
 
-Методы:
-- ```addBehavior(trigger: HTMLElement, popup: HTMLElement): void``` — Добавляет поведение для открытия и закрытия модального окна.
+Methods:
+- ``addBehavior(trigger: HTMLElement, popup: HTMLElement): void`` — Adds behavior for opening and closing a modal window.
 
-Как может быть использован:
-- Создание диалоговых окон подтверждения действий.
-- Реализация всплывающих форм обратной связи или входа в систему.
+How can it be used:
+- Creation of action confirmation dialog boxes.
+- Implementation of pop-up feedback or login forms.
 
-#### Класс: Tooltip (Наследуется от PopUp)
-Описание: класс для управления всплывающими подсказками.
+#### Class: Tooltip (Inherited from PopUp)
+Description: A class for managing tooltips.
 
-Методы:
-- ```addBehavior(trigger: HTMLElement, popup: HTMLElement): void``` — Добавляет обработчик событий.
-- ```hideTooltip(tooltip: HTMLElement, delay: number): void``` — Скрывает всплывающую подсказку с задержкой.
+Methods:
+- ``addBehavior(trigger: HTMLElement, popup: HTMLElement): void`` — Adds an event handler.
+- ``hideTooltip(tooltip: HTMLElement, delay: number): void`` — Hides the popup hint with a delay.
 
-Как может быть использован:
-- Отображение вспомогательной информации при наведении на элементы интерфейса.
-- Улучшение юзабилити веб-форм и сложных UI-компонентов.
+How can it be used:
+- Display of auxiliary information when hovering over the interface elements.
+- Improve the usability of web forms and complex UI components.
 
 #### UML-диаграмма компонента
 <p>
@@ -265,95 +318,95 @@ import {
 </p>
 
 <h3 id="section-form-validation">
-  Валидация форм (Form Validation)
+  Form Validation
 </h3>
 
-#### Класс: FormValidator
-Описание: класс для управления валидацией форм. Позволяет проверять корректность ввода, управлять состоянием кнопки отправки и выводить сообщения об ошибках.
+#### Class: FormValidator
+Description: A class for managing form validation. It allows you to check the correctness of the input, manage the status of the submit button, and display error messages.
 
-Методы:
-- ```initAll(): void``` — Инициализирует валидацию для всех форм.
-- ```init(form: SelectorElement): void``` — Инициализирует валидацию для конкретной формы.
-- ```searchBtnSubmit(form: HTMLFormElement): ButtonSubmit``` — Ищет кнопку отправки формы.
-- ```toogleButtonState(inputList: HTMLInputElement[], btnSubmit: ButtonSubmit): void``` — Переключает состояние кнопки отправки.
-- ```hasInvalidInput(inputsList: HTMLInputElement[]): boolean``` — Проверяет, есть ли в форме невалидные поля.
-- ```showError(input: HTMLInputElement, errorMessage: string): void``` — Отображает сообщение об ошибке.
-- ```hideError(input: HTMLInputElement): void``` — Скрывает сообщение об ошибке.
-- ```inputValidation(form: HTMLFormElement, input: HTMLInputElement): void``` — Проверяет валидность ввода.
+Methods:
+- ``initAll(): void`` — Initializes validation for all forms.
+- ``init(form: SelectorElement): void`` — Initializes validation for a specific form.
+- ``searchBtnSubmit(form: HTMLFormElement): ButtonSubmit`` — Searches for the form submission button.
+- ``toogleButtonState(inputList: HTMLInputElement[], btnSubmit: ButtonSubmit): void`` — Switches the status of the submit button.
+- ``hasInvalidInput(inputsList: HTMLInputElement[]): boolean`` — Checks if there are invalid fields in the form.
+- ``showError(input: HTMLInputElement, ErrorMessage: string): void`` — Displays an error message.
+- ``hideError(input: HTMLInputElement): void`` — Hides the error message.
+- ``inputValidation(form: HTMLFormElement, input: HTMLInputElement): void`` — Checks the validity of the input.
 
-Как может быть использован:
-- Автоматическая проверка форм перед их отправкой.
-- Предотвращение отправки некорректных данных пользователями.
+How can it be used:
+- Automatic verification of forms before sending them.
+- Preventing users from sending incorrect data.
 
-#### UML-диаграмма компонента
+#### UML component diagram
 <p>
   <img width="100%" height="100%" src="./docs/valid.png">  
 </p>
 
 <h3 id="section-content-switching">
-  Переключение контента (Content Switching)
+  Content Switching
 </h3>
 
-#### Класс: ContentSwitcher
-Описание: общий механизм для переключения отображаемого контента по клику на триггеры.
+#### Class: ContentSwitcher
+Description: A common mechanism for switching the displayed content by clicking on triggers.
 
-Методы:
-- ```initAll(): void``` — Инициализирует все переключатели контента.
-- ```init(contentSwitcher: SelectorElement): void``` — Инициализирует один переключатель.
-- ```addBehavior(switchContent: HTMLElement[], allTriggers: HTMLElement[]): void``` — Добавляет обработчики событий.
+Methods:
+- ``initAll(): void`` — Initializes all content switches.
+- ``init(contentSwitcher: SelectorElement): void`` — Initializes one switch.
+- ``addBehavior(switchContent: HTMLElement[], allTriggers: HTMLElement[]): void`` — Adds event handlers.
 
-Как может быть использован:
-- Переключение вкладок (Tabs).
-- Отображение слайдов в галерее или слайдере.
+How can it be used:
+- Switching Tabs.
+- Display slides in the gallery or slider.
 
-#### Класс: Accordion
-Описание: реализация аккордеона – компонента, который позволяет скрывать и разворачивать блоки контента.
+#### Class: Accordion
+Description: An accordion implementation is a component that allows you to hide and expand content blocks.
 
-Как может быть использован:
-- Создание списка часто задаваемых вопросов (FAQ).
-- Управление отображением длинных текстов.
+How can it be used:
+- Create a list of frequently asked questions (FAQ).
+- Control the display of long texts.
 
-#### Класс: Gallery (Наследуется от ContentSwitcher)
-Описание: позволяет переключать изображения внутри галереи.
-Как может быть использован:
-- Реализация карусели изображений.
-- Просмотр изображений в режиме слайд-шоу.
+#### Class: Gallery (Inherited from ContentSwitcher)
+Description: Allows you to switch images inside the gallery.
+How can it be used:
+- Implementation of a carousel of images.
+- View images in slideshow mode.
 
-#### Класс: Slider (Наследуется от ContentSwitcher)
-Описание: расширение функционала галереи, позволяющее пользователям переключать слайды с помощью точек или стрелок.
+#### Class: Slider (Inherited from ContentSwitcher)
+Description: An extension of the gallery functionality that allows users to switch slides using dots or arrows.
 
-Методы:
-- ```showSlider(dots: HTMLElement[], switchContent: HTMLElement[], sliderIndex: number): void``` — Отображает активный слайд.
+Methods:
+- ```showSlider(dots: HTMLElement[], switchContent: HTMLElement[], sliderIndex: number): void``` — Displays the active slide.
 
-Как может быть использован:
-- Реализация рекламных баннеров или слайд-шоу.
-- Отображение контента с пошаговой навигацией.
+How can it be used:
+- Implementation of advertising banners or slide shows.
+- Display of content with step-by-step navigation.
 
-#### Класс: Tabs (Наследуется от ContentSwitcher)
-Описание: класс для управления вкладками, переключающими отображаемый контент.
-Как может быть использован:
-- Создание многостраничных форм без перезагрузки страницы.
-- Организация информации в карточках товаров или профилях пользователей.
+#### Class: Tabs (Inherited from ContentSwitcher)
+Description: A class for managing tabs that switch the displayed content.
+How can it be used:
+- Create multi-page forms without reloading the page.
+- Organization of information in product cards or user profiles.
 
-#### UML-диаграмма компонента
+#### UML component diagram
 <p>
   <img width="100%" height="100%" src="./docs/swither.png">  
 </p>
 
 <h3 id="section-async-components">
-  Асинхронные элементы (Async Components)
+  Asynchronous elements (Async Components)
 </h3>
 
-#### Класс: AsyncDropdown (Наследуется от Dropdown)
-Описание: позволяет загружать данные динамически и отображать их в выпадающем списке.
+#### Class: AsyncDropdown (Inherited from Dropdown)
+Description: Allows you to load data dynamically and display it in a drop-down list.
 
-Методы:
-- ```cashFunction(fn: Function): Function``` — Кеширует результаты поиска.
-- ```renderSearch(list: string[], parentElement: HTMLElement): void``` — Отображает результаты поиска.
+Methods:
+- ``cashFunction(fn: Function): Function`` — Caches search results.
+- ``renderSearch(list: string[], parentElement: HTMLElement): void`` — Displays search results.
 
-Как может быть использован:
-- Реализация поиска с автодополнением.
-- Загрузка данных о товарах, пользователях или других сущностях по мере ввода текста.
+How can it be used:
+- Implementation of search with auto-completion.
+- Loading data about products, users, or other entities as you type text.
 
 #### UML-диаграмма компонента
 <p>
@@ -361,79 +414,86 @@ import {
 </p>
 
 <h3 id="section-сhat-queue">
-  Чат и Очередь сообщений (Chat & Queue)
+  Chat and Message Queue
 </h3>
 
-#### Класс: Chat
-Описание: позволяет реализовать веб-чат с сохранением состояния сообщений и пользователей.
+#### Class: Chat
+Description: allows you to implement a web chat with saving the status of messages and users.
 
-Методы:
-- ```init(form: HTMLFormElement): void``` — Инициализирует чат и привязывает форму отправки сообщений.
+Methods:
+- ``init(form: HTMLFormElement): void`` — Initializes the chat and binds the message sending form.
 
-Как может быть использован:
-- Организация чата для поддержки клиентов.
-- Создание системы сообщений в реальном времени для веб-приложений.
+How can it be used:
+- Organization of a chat for customer support.
+- Creation of a real-time messaging system for web applications.
 
-#### Класс: PopUpNotification
-Описание: отвечает за управление очередью всплывающих уведомлений.
+#### Class: PopUpNotification
+Description: Responsible for managing the queue of pop-up notifications.
 
-Методы:
-- ```addNotification(message: string): void``` — Добавляет новое уведомление в очередь.
-- ```renderNotification(): void``` — Отображает уведомление.
+Methods:
+- ``addNotification(message: string): void`` — Adds a new notification to the queue.
+- ``renderNotification(): void`` — Displays the notification.
 
-Как может быть использован:
-- Вывод уведомлений о новых сообщениях или ошибках.
-- Создание системы push-уведомлений в веб-приложениях.
+How can it be used:
+- Displays notifications of new messages or errors.
+- Creation of a push notification system in web applications.
 
-#### Класс: Queue<T>
-Описание: общий класс для управления очередью элементов.
+#### Class: Queue<T>
+Description: A general class for managing a queue of items.
 
-Методы:
-- ```add(el: T): void``` — Добавляет элемент в очередь.
-- ```remove(): T | undefined``` — Удаляет элемент из очереди.
-- ```size(): number``` — Возвращает количество элементов в очереди.
-- ```get(): Array<T>``` — Возвращает массив элементов очереди.
+Methods:
+- ``add(el: T): void`` — Adds an item to the queue.
+- ``remove(): T | undefined`` — Removes an item from the queue.
+- ``size(): number`` — Returns the number of items in the queue.
+- ``get(): Array<T>`` — Returns an array of queue items.
 
-Как может быть использован:
-- Управление очередью сообщений или уведомлений.
-- Хранение запросов пользователей в режиме офлайн.
+How can it be used:
+- Manage the queue of messages or notifications.
+- Storing user requests offline.
 
-#### UML-диаграмма компонента
+#### UML component diagram
 <p>
   <img width="100%" height="100%" src="./docs/chat.png">  
 </p>
 
 <h3 id="section-text-selection-errors">
-  Ошибки выбора текста (Text Selection Errors)
+  Text Selection Errors
 </h3>
 
-#### Класс: PopUpSelectionError
-Описание: позволяет отображать всплывающие ошибки при выделении некорректного текста.
+#### Class: PopUpSelectionError
+Description: allows you to display pop-up errors when selecting incorrect text.
 
-Методы:
-- ```addBehavior(trigger: HTMLElement, popup: HTMLElement): void``` — Добавляет обработчики событий.
+Methods:
+- ``addBehavior(trigger: HTMLElement, popup: HTMLElement): void`` — Adds event handlers.
 
-Как может быть использован:
-- Подсветка ошибок в текстовых редакторах.
-- Автоматическое исправление текста при выделении.
+How can it be used:
+- Highlighting errors in text editors.
+- Automatic correction of text when selected.
 
-#### Класс: SelectionText
-Описание: класс для работы с выделенным текстом.
+#### Class: selectionText
+Description: a class for working with selected text.
 
-Методы:
-- ```getSelectedText(): string``` — Получает текущий выделенный текст.
+Methods:
+- ```getSelectedText():string``` — Gets the currently selected text.
 
-Как может быть использован:
-- Получение выделенного текста для анализа или исправления.
-- Отображение опций копирования, вставки или исправления текста.
+How can it be used:
+- Getting selected text for analysis or correction.
+- Displays options for copying, pasting, or correcting text.
+
+#### UML component diagram
+
 <p>
   <img width="100%" height="100%" src="./docs/error.png">  
 </p>
 
-## Author
+<h2 id="section-author">
+  Author
+</h2>
 
 [Kirill Doroshev (DKMFzF)](https://vk.com/dkmfzf )
 
-## License
+<h2 id="section-license">
+  License
+</h2>
 
 This project is licensed under the MIT license
