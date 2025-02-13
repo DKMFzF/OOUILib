@@ -61,7 +61,7 @@ __The library was created by accident. Initially, I created components in my pet
   Important files
 </h3>
 
-- lib/index.ts — the main library file
+- lib/ooui.ts — the main library file
 - lib/UILib.ts — the main library lifecycle file
 - lib/utils/utils.ts — a file with auxiliary functions
 
@@ -107,7 +107,7 @@ import {
   PopUpSelectionError,
   Queue,
   Chat,
-} from './lib/index.ts';
+} from './lib/ooui.ts';
 ```
 
 <h3 id="use-components">
