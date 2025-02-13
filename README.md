@@ -3,6 +3,8 @@
   <em>This library is a set of reusable components that simplify the creation of interactive and adaptive user interfaces. A handy tool when you need to use OOP in interfaces, the library will continue to be updated, this is not its latest version. Under the hood, the library uses pure TypeScript.</em>
 </p>
 
+![oop](./docs/oop.png)
+
 ## Documentation language
 - [Если ты говоришь по русски то тыкай сюда](./docs/README.ru.md)
 
