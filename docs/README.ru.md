@@ -490,7 +490,7 @@ import {
 - __TODO__: Добавить тесты для компонентов
 
 <h2 id="section-author">
-  Author
+  Автор
 </h2>
 
 [Дорошев Кирилл (DKMFzF)](https://vk.com/dkmfzf )
