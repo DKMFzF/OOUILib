@@ -5,7 +5,7 @@
 
 ![oop](./docs/oop.png)
 
-__The library was created by accident. Initially, I created components in my pet projects, then I realized that the components were moving from project to project, I started assembling them in one place, and as a result, this resulted in my micro "bible library". There are a lot of similar libraries on the Internet, so this is just my vision of the layout of the "display" (the implementation practically does not change from project to project). The library shows itself best in the architectural patterns of the MV group.__
+__The library was created by accident. Initially, I created components in my pet-projects, then I realized that the components were moving from project to project, I started assembling them in one place, and as a result, this resulted in my micro library. There are a lot of similar libraries on the Internet, so this is just my vision of the layout of the UI (the implementation practically does not change from project to project). The library shows itself best in the architectural patterns of the MV group.__
 
 ## Documentation language
 - [Если ты говоришь по русски то тыкай сюда](./docs/README.ru.md)
