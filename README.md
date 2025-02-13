@@ -30,6 +30,8 @@
   - [Chat & Queue](#section-сhat-queue)
   - [Text Selection Errors](#section-text-selection-errors)
 
+- [TODO](#section-todo)
+
 - [Author](#section-author)
   - [Kirill Doroshev](https://github.com/dkmfzf)
 
@@ -484,6 +486,13 @@ How can it be used:
 <p>
   <img width="100%" height="100%" src="./docs/error.png">  
 </p>
+
+<h2 id="section-todo">
+  Plans to refine/add functionality
+</h2>
+
+- __TODO__: Add packages to the npm infrastructure
+- __TODO__: Add tests for components
 
 <h2 id="section-author">
   Author
