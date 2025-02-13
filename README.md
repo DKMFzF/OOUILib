@@ -1,6 +1,6 @@
 <h1 align="center">Compact UI library (OOP)</h1>
 <p align="center">
-  <em>A library for quick deployment of user interface components. It is necessary when the components are used on the site. The library will continue to be updated, this is not its last build.</em>
+  <em>A reliable, modular and extensible user interface library designed for the rapid development of modern web applications. This library, created in accordance with the principles of object-oriented programming (OOP), is a set of reusable components that simplify the creation of interactive and adaptive user interfaces. Regardless of whether you are creating a small project or a large-scale application, this library will save you time and effort. The library will continue to be updated, this is not its latest version.</em>
 </p>
 
 ## Documentation language
