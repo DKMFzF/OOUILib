@@ -1,4 +1,4 @@
-<h1 align="center">Compact UI library</h1>
+<h1 align="center">OOUILib</h1>
 <p align="center">
   <em>This library is a set of reusable components that simplify the creation of interactive and adaptive user interfaces. A handy tool when you need to use OOP in interfaces, the library will continue to be updated, this is not its latest version. Under the hood, the library uses pure TypeScript.</em>
 </p>
