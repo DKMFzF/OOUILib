@@ -45,21 +45,21 @@
   Global Structure
 </h3>
 
-- src/ — project source files
-- src/Components/Chat — chat component folder
-- src/Components/Notification — the folder with the message component
-- src/Components/PopUpSelectionError — folder with the error selection component
-- src/ContentSwitcher — folder with the content switch component
-- src/FormValidation — folder with the form validation component
-- src/PopUp — folder with pop-up window components
+- lib/ — project source files
+- lib/Components/Chat — chat component folder
+- lib/Components/Notification — the folder with the message component
+- lib/Components/PopUpSelectionError — folder with the error selection component
+- lib/ContentSwitcher — folder with the content switch component
+- lib/FormValidation — folder with the form validation component
+- lib/PopUp — folder with pop-up window components
 
 <h3 id="section-important-files">
   Important files
 </h3>
 
-- src/index.ts — the main library file
-- src/UILib.ts — the main library lifecycle file
-- src/utils/utils.ts — a file with auxiliary functions
+- lib/index.ts — the main library file
+- lib/UILib.ts — the main library lifecycle file
+- lib/utils/utils.ts — a file with auxiliary functions
 
 <h2 id="section-how-to-use">
   How To Use

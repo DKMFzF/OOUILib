@@ -42,21 +42,21 @@
   Глобальная структура
 </h3>
 
-- src/ — корневая папка проекта
-- src/Components/Chat — папка с компонентами чата
-- src/Components/Notification — папка с компонентом сообщения
-- src/Components/PopUpSelectionError — папка с компонентом выбора ошибки
-- src/ContentSwitcher — папка с компонентом переключателя контента
-- src/FormValidation — папка с компонентом валидации формы
-- src/PopUp — папка с компонентами всплывающих окон
+- lib/ — корневая папка проекта
+- lib/Components/Chat — папка с компонентами чата
+- lib/Components/Notification — папка с компонентом сообщения
+- lib/Components/PopUpSelectionError — папка с компонентом выбора ошибки
+- lib/ContentSwitcher — папка с компонентом переключателя контента
+- lib/FormValidation — папка с компонентом валидации формы
+- lib/PopUp — папка с компонентами всплывающих окон
 
 <h3 id="section-important-files">
   Важная структура
 </h3>
 
-- src/index.ts — главный файл библиотеки
-- src/UILib.ts — главный файл жизненного цикла библиотеки
-- src/utils/utils.ts — файл с вспомогательными функциями
+- lib/index.ts — главный файл библиотеки
+- lib/UILib.ts — главный файл жизненного цикла библиотеки
+- lib/utils/utils.ts — файл с вспомогательными функциями
 
 <h2 id="section-how-to-use">
   Как использовать
