@@ -4,7 +4,7 @@
 </p>
 
 ## Documentation language
-- [Дока на русском](./docs/README.ru.md)
+- [Если ты говоришь по русски то тыкай сюда](./docs/README.ru.md)
 
 ## Navigation in documentation
 - [Project Structure](#section-lib-structure)
@@ -505,3 +505,7 @@ How can it be used:
 </h2>
 
 This project is licensed under the MIT license
+
+<p align="center">
+  <img width="50%" src="./docs/cat.jpg">  
+</p>

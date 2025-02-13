@@ -500,3 +500,7 @@ import {
 </h2>
 
 Этот проект лицензирован по лицензии MIT
+
+<p align="center">
+  <img width="50%" src="./cat.jpg">  
+</p>
